@@ -1,0 +1,11 @@
+<ul>
+  <li (click)="onSelect(contact)" [class.clicked]='showDetail === true' *ngFor="let contact of contacts">
+    {{contact.firstName}} {{contact.lastName}}
+  </li>
+</ul>
+<input type="text" [(ngModel)]="selectedContact.firstName">
+<div>
+  Phone Number: {{selectedContact.phone}}
+  <br>
+  Email: {{selectedContact.email}}
+</div>
