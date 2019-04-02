@@ -1,0 +1,9 @@
+<h3 (click)="onSelect()" [class.clicked]='showDetail === true'>
+  {{contact.firstName}} {{contact.lastName}}
+</h3>
+<input type="text" [(ngModel)]="contact.firstName">
+<div *ngIf="showDetail === true">
+  Phone Number: {{contact.phone}}
+  <br>
+  Email: {{contact.email}}
+</div>
