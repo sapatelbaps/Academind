@@ -67,3 +67,22 @@ const testMap = companies.map(function(company) {
   return '${company.name} [${company.start} - ${company.end}]';
 });
 testMap.forEach(m => console.log(m));
+
+// reduce - used to maintain total of items and iterate through all items FROM SPECIFIC INDEX
+// Get total years for all companies
+
+// const totalYears = companies.reduce(function(total, company) {
+//   return total + (company.end - company.start);
+// }, 0);
+
+const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0);
+console.log(totalYears);
+
+// Combine Methods
+const combined = ages
+  .map(age => age * 2)
+  .filter(age => age >= 40)
+  .sort((a, b) => a - b)
+  .reduce((a, b) => a + b, 0);
+
+console.log(combined);
