@@ -59,12 +59,12 @@ mappedArr2.forEach(item => console.log(item));
 
 console.log("Mapped Array 3");
 var mappedArr3 = companies.map(function(company){
-  return '${company.name} (${company.category}) : [${company.start} - ${company.end}]';
+  return `${company.name} (${company.category}) : [${company.start} - ${company.end}]`;
 });
 mappedArr3.forEach(item => console.log(item));
 
 const testMap = companies.map(function(company) {
-  return '${company.name} [${company.start} - ${company.end}]';
+  return `${company.name} [${company.start} - ${company.end}]`;
 });
 testMap.forEach(m => console.log(m));
 
